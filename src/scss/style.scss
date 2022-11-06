@@ -14,6 +14,7 @@ $deep-indigo: #4A007C;
     line-height: 24px;
     font-weight: 700;
     color: $white;
+    background-color: $green;
 }
 
 body * {
@@ -68,7 +69,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $green;
 }
 
 .c-top-inner {
@@ -136,7 +136,6 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 3rem 0;
-    background-color: $green;
 }
 
 .c-work-section {
@@ -149,52 +148,30 @@ header {
 
     &__ttl {
         position: relative;
-        z-index: 1;
-        font-size: 64px;
+        font-size: 36px;
         font-weight: 900;
-        line-height: 84px;
+        line-height: 42px;
         color: $deep-green;
 
-        @include mq(xl) {
-            font-size: 48px;
-            line-height: 64px;
-        }
-
         @include mq(md) {
-            font-size: 36px;
-            line-height: 54px;
+            font-size: 32px;
+            line-height: 36px;
         }
 
         @include mq(sm) {
-            font-size: 28px;
-            line-height: 48px;
+            font-size: 24px;
+            line-height: 28px;
         }
 
         &::before {
             content: '';
             position: absolute;
-            z-index: -1;
-            top: -6px;
+            bottom: -1rem;
             right: 0;
             display: block;
             width: 100vw;
-            height: 96px;
-            background-color: $light-green;
-
-            @include mq(xl) {
-                top: -4px;
-                height: 72px;
-            }
-
-            @include mq(md) {
-                top: -5px;
-                height: 64px;
-            }
-
-            @include mq(sm) {
-                top: -3px;
-                height: 54px;
-            }
+            height: 2px;
+            background-color: $deep-green;
         }
     }
 }
@@ -205,11 +182,11 @@ header {
     padding: 5rem 0;
 
     @include mq(xl) {
-        padding: 3rem 0;
+        padding: 4rem 0;
     }
 
-    @include mq(sm) {
-        padding: 2.5rem 0;
+    @include mq(md) {
+        padding: 3rem 0;
     }
 }
 
@@ -225,20 +202,6 @@ header {
     &:not(:first-of-type) {
         margin-top: 2rem;
     }
-
-    &__ttl {
-        font-style: italic;
-        font-size: 18px;
-        line-height: 18px;
-        padding: 3px 0;
-    }
-
-    &__txt {
-        font-size: 14px;
-        line-height: 18px;
-        color: $off-white;
-        padding: 3px 0;
-    }
 }
 
 .c-experience-item-left {
@@ -246,6 +209,7 @@ header {
     text-align: left;
     padding-right: 3rem;
     font-size: 18px;
+    line-height: 24px;
 
     @include mq(xl) {
         width: 200px;
@@ -258,6 +222,12 @@ header {
 
     @include mq(md) {
         padding-right: 0;
+        font-size: 16px;
+    }
+
+    @include mq(sm) {
+        margin-bottom: 10px;
+        font-size: 14px;
     }
 }
 
@@ -266,8 +236,25 @@ header {
     padding-left: 3rem;
     border-left: 1px solid $white;
 
+    &__ttl {
+        font-style: italic;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &__txt {
+        font-size: 14px;
+        line-height: 14px;
+        padding: 6px 0;
+    }
+
     @include mq(xl) {
         padding-left: 2rem;
+    }
+
+    @include mq(lg) {
+        margin-left: 0.1rem;
+        padding-left: 1.2rem;
     }
 
     @include mq(md) {
@@ -278,14 +265,14 @@ header {
 .c-personal {
     width: 100%;
     height: auto;
-    padding: 5rem 0;
+    padding-top: 5rem;
 
     @include mq(xl) {
-        padding: 3rem 0;
+        padding-top: 4rem;
     }
 
-    @include mq(sm) {
-        padding: 2rem 0;
+    @include mq(md) {
+        padding-top: 3rem;
     }
 }
 
@@ -300,15 +287,13 @@ header {
     &__ttl {
         font-style: italic;
         font-size: 18px;
-        line-height: 18px;
-        padding: 3px 0;
+        line-height: 24px;
     }
 
     &__txt {
         font-size: 14px;
-        line-height: 18px;
-        color: $off-white;
-        padding: 3px 0;
+        line-height: 14px;
+        padding: 6px 0;
     }
 
     &__img {
@@ -334,13 +319,20 @@ footer {
     }
 
     &__ttl {
-        font-size: 28px;
+        font-size: 36px;
         font-weight: 700;
-        line-height: 32px;
+        line-height: 42px;
         text-align: center;
         padding-bottom: 2rem;
 
+        @include mq(md) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
         @include mq(sm) {
+            font-size: 24px;
+            line-height: 28px;
             padding-bottom: 1rem;
         }
     }
@@ -354,6 +346,7 @@ footer {
 
     &__item {
         font-size: 18px;
+        line-height: 18px;
 
         @include mq(sm) {
             font-size: 14px;
